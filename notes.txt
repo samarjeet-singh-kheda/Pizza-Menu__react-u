@@ -1,0 +1,45 @@
+*** PROFILE CARD (v1) ---> https://codesandbox.io/p/sandbox/react-challenge-dev-profile-starter-forked-x9krmf *** 
+
+
+AFTER React V18 -->
+            import ReactDOM from "react-dom/client";
+
+            ReactDOM.createRoot(document.getElementsByClassName("root")[0]).render(
+            <h1>My Project!</h1>
+            );
+
+BEFORE React V18 -->
+            import ReactDOM from "react-dom";
+
+            ReactDOM.render(
+            <h1>Hello, v18!!!</h1>,
+            document.getElementsByClassName("root")[0]
+            );
+
+//////////////////////////////////////////////////////////////////////////
+STRICT MODE -->
+
+1)  During development, it renders every component twice in order to find certain bugs.
+2)  It checks we are using outdated parts of React API.
+
+
+//////////////////////////////////////////////////////////////////////////
+
+INLINE STYLING  -->
+
+1) JSX only accepts objects as inline styles (here property names are converted from "kebab case" to "camel case" & all the values are strings, doesn't matter if we include unit or not).
+2)  In "inline style", the outer braces are to enter JS mode & the inner braces are because JSX only accepts styled objects as Inline CSS.
+
+
+//////////////////////////////////////////////////////////////////////////
+WEBPACK (including CSS files & images)
+
+1)  Webpack injects imported CSS in our application, it is also responsible for including images that are in public folder
+2)  It is a convention to put images in public folder.
+3)  We can't import anything from public folder in CRA (not even if we specify the correct path).
+4)  There has to be a "public/index.html" & "src/index.js" files for CRA to work.
+
+//////////////////////////////////////////////////////////////////////////
+SEPARATION OF CONCERNS -->      In JSX, HTML & JS are co-located, it means that things that change together should be located as close together as possible.
+
+//////////////////////////////////////////////////////////////////////////
